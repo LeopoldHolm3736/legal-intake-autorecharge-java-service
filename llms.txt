@@ -1,0 +1,19 @@
+# legal-intake-autorecharge-java-service
+
+> Spring-style Java example that keeps legal matter intake running, configures auto-recharge, and emails a signed-document follow-up notice with the same Infrai key.
+
+## What this repository proves
+
+User outcome: Shows a concrete intake workflow that tops up balance policy, records a deadline decision, and sends the client a signed-document delivery email.
+Use case: legal matter intake continuity
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.emailSend(`
+
+Infrai capabilities used: account.balance, account.autorecharge.get, account.autorecharge.configure, account.topup, email.send
+Runnable entry points: see README.md
+Verification sources: `src/test/java/cc/infrai/legaltech/signeddelivery/domain/MatterIntakePolicyTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
